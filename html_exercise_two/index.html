@@ -1,0 +1,65 @@
+<!-- HTML and CSS: Exercise Two -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Exercise Two</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+  <h2>To the New</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Quick help</a></li>
+  </ul>
+</div>
+<hr/>
+<div id="bug-form">
+  <form>
+    <h3 id="form-heading">Bug Report</h3>
+    <div id="form-body">
+      <label>Title:*</label><br/>
+      <input class="form-element" type="text" name="title" required>
+      <label>Description:*</label><br/>
+      <textarea class="form-element" name="description" rows="4"></textarea>
+      <label>Operating system:</label><br/>
+      <select class="form-element" name="operatingsystem">
+        <option value="windowsxp" selected>Windows XP</option>
+        <option value="macos">Mac OS</option>
+        <option value="ubuntu">Ubuntu</option>
+      </select>
+      <label>Product:*</label><br/>
+      <select class="form-element" name="product">
+        <option value="formoid" selected>Formoid</option>
+        <option value="someprod">Some other product</option>
+        <option value="anotherprod">Or another product</option>
+      </select>
+      <label>Version:*</label><br/>
+      <input class="form-element" style="width: 20%;" type="text" name="title" required><br/>
+      <label>License:</label><br/>
+      <div class="form-element">
+        <table width="100%">
+          <tr>
+            <td style="width: 50%;"><input type="radio" name="license" value="free"> Free</td>
+            <td style="width: 50%;"><input type="radio" name="license" value="business"> Business<br></td>
+          </tr>
+        </table>
+      </div>
+      <label>Severity:</label><br/>
+      <select class="form-element" name="severity">
+        <option value="critical" selected>Critical</option>
+        <option value="moderate">Moderate</option>
+        <option value="low">Low</option>
+      </select>
+      <label>Attachments:</label><br/>
+      <input class="form-element" type="file">
+    </div>
+    <div id="form-footer">
+      <input type="submit" id="submit-btn" value="Send">
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
