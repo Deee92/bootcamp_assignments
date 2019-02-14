@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Eight</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1 id="click-here">Click here to add a heading</h1>
+</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $("#click-here").click(function () {
+      var newHeading = "<h3>This is a new heading</h3>";
+      $(".main").append(newHeading);
+    })
+    $(".main").on("click","h3" ,function () {
+      console.log("The new heading was clicked");
+    })
+  });
+</script>
+</body>
+</html>

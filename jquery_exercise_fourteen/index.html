@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Fourteen</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    table, tr, td {
+      padding: 1em;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <table>
+    <tr>
+      <td>Indians</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Americans</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Germans</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>6</td>
+    </tr>
+  </table>
+</div>
+<script>
+  $(document).ready(function () {
+    $("td").each(function () {
+      let value = $(this).text();
+      if (value > 10) {
+        $(this).css({"background": "#14d095", "color": "#fff"});
+      }
+    });
+  });
+</script>
+</body>
+</html>

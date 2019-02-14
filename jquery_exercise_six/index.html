@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Six</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div id="main">
+  <p>Original text</p>
+</div>
+<div>Another div</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $("div > p").html("<strong>This is my new HTML</strong>");
+  });
+</script>
+</body>
+</html>

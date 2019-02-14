@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Ten</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    #my-dropdown {
+      padding: 0.8em;
+      border: 1px solid crimson;
+      text-align: center;
+      color: darkred;
+      background: aquamarine;
+    }
+
+    #dropdown-content {
+      display: none;
+    }
+
+    #dropdown-content a {
+      display: block;
+      width: 5em;
+      border: 1px solid darkred;
+      padding: 1em;
+      text-align: center;
+      text-decoration: none;
+      color: darkred;
+      background: aquamarine;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <div>
+    <button id="my-dropdown">Competency</button>
+    <div id="dropdown-content">
+      <a href="#">JVM</a>
+      <a href="#">AMC</a>
+      <a href="#">FEEN</a>
+      <a href="#">MEAN</a>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $("#my-dropdown").hover(function () {
+      console.log("Hovering");
+      $("#dropdown-content").css({"display": "block"});
+    }, function () {
+      $("#dropdown-content").css({"display": "none"});
+    });
+  });
+</script>
+</body>
+</html>

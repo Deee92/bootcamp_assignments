@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Twelve</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <ul>
+    <li id="click-li">This is a clickable list item</li>
+  </ul>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".main").click(function (event) {
+      console.log("Click event is a-bubbling!");
+      console.log(event.target);
+    })
+    $("#click-li").click(function (event) {
+      console.log(event.target + " clicked on!");
+      event.stopPropagation();
+    });
+  });
+</script>
+</body>
+</html>

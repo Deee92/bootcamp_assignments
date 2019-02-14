@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Three</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <p class="to-the-new">To the New</p>
+  <p class="to-the-old">Not to the new</p>
+  <p class="renew">Renew</p>
+</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $("[class$='-new']").css({"color": "#ff3757"});
+  });
+</script>
+</body>
+</html>

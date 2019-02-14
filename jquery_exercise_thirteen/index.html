@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Thirteen</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body style="max-height: 100px">
+<div style="max-height: 70px;" class="main">
+  <h1 style="max-height: 30px;">Hello, JQuery!</h1>
+  <p style="max-height: 20px;">I am a paragraph</p>
+  <small style="max-height: 10px;">I am a small piece of text</small>
+</div>
+<script>
+  $(document).ready(function () {
+    $("*").each(function () {
+      let elemTarget = $(this).prop("tagName");
+      let elemHeight =  $(this).css("max-height");
+      console.log(elemTarget + " has max-height of " + elemHeight);
+    })
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Four</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <input type="text">
+  <input type="submit" value="Go">
+</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $(":submit").attr('disabled', 'disabled');
+  });
+</script>
+</body>
+</html>

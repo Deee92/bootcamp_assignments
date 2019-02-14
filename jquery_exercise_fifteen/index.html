@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Fifteen</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <button>Click for magic</button>
+</div>
+<script>
+  $(document).ready(function () {
+    $("button").click(function(){
+      $.get("https://reqres.in/api/users/6", function(data, status){
+        console.log(data);
+        alert("Status: " + status);
+      });
+    });
+  });
+</script>
+</body>
+</html>

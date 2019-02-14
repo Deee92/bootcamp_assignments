@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>JQuery Exercise Five</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div id="main">
+  <h1 class="target">I will change</h1>
+</div>
+<script>
+  $(document).ready(function () {
+    console.log("Your document has loaded");
+    $("#main > .target").css({"font-size": "2em"});
+  });
+</script>
+</body>
+</html>
