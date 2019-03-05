@@ -1,0 +1,9 @@
+// Gradle file with additional mytasks 
+
+task customOne {
+    println "This is a custom task"
+}
+
+task customTwo << {
+    println "This is another custom task"
+}

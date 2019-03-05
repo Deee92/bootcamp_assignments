@@ -1,0 +1,5 @@
+gradle_session/.idea
+gradle_session/build
+gradle_session/.gradle
+gradle_session/gradle_session.iml
+
