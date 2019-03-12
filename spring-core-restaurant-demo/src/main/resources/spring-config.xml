@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.springdemo"></context:component-scan>
+
+    <bean id="teaBean" class="com.springdemo.Tea"></bean>
+
+    <!-- <bean id="expressTeaBean" class="com.springdemo.ExpressTea"></bean> -->
+    <bean id="restaurantBean" class="com.springdemo.Restaurant"></bean>
+
+    <!--
+    <bean id="restaurantBean" class="com.springdemo.Restaurant">
+        <property name="hotDrink" ref="teaBean"></property>
+    </bean> -->
+
+    <bean id="teaRestaurantBean" class="com.springdemo.Restaurant" scope="prototype">
+        <!-- Question 3: Setting bean for com.springdemo.Tea -->
+        <!-- <property name="hotDrink" ref="teaBean"></property> -->
+
+        <!-- Question 4: Inner bean for com.springdemo.ExpressTea -->
+        <!-- <property name="hotDrink">
+            <bean id="expressTeaBean" class="com.springdemo.ExpressTea"></bean>
+        </property> -->
+    </bean>
+
+    <!-- Question 5 -->
+    <!-- <bean id="hotDrink" class="com.springdemo.Tea"></bean>
+    <bean id="restaurantBean1" class="com.springdemo.Restaurant" autowire="byName"></bean>
+    <bean id="restaurantBean2" class="com.springdemo.Restaurant" autowire="byType"></bean>
+    <bean id="restaurantBean3" class="com.springdemo.Restaurant" autowire="constructor"></bean>
+    -->
+</beans>
