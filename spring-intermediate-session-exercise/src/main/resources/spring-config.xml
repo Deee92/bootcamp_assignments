@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <aop:aspectj-autoproxy/>
+    <context:annotation-config/>
+
+    <bean id="multiEventListenerBean" class="com.spring.intermediate.MultiEventListener"></bean>
+
+    <bean id="databaseBean" class="com.spring.intermediate.Database">
+        <property name="port" value="27017"></property>
+        <property name="name" value="mongodb"></property>
+    </bean>
+
+    <bean id="loggingAspectBean" class="com.spring.intermediate.LoggingAspect"></bean>
+    <bean id="serviceClassBean" class="com.spring.intermediate.ServiceClass"></bean>
+
+</beans>

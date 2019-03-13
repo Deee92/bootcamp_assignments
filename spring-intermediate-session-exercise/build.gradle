@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'spring-intermediate-session'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework:spring-context:5.1.5.RELEASE"
+    compile "org.springframework:spring-beans:5.1.5.RELEASE"
+    compile group: 'org.springframework', name: 'spring-aop', version: '2.5.6'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.3.RC1'
+}
