@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index | Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+</head>
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<h1>Hello, Thymeleaf!</h1>
+<button id="clickMe">Click here</button>
+<p><a th:href="@{/employees}">List of employees</a></p>
+<div th:replace="fragments/fragment :: footer"></div>
+<script th:src="@{scripts/script.js}"></script>
+</body>
+</html>

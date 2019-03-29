@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+</head>
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<h1>User Registration</h1>
+<form th:action="@{/employees}" th:object="${employee}" method="POST">
+    <label>First name: </label>
+    <input type="text" th:field="*{firstName}"/>
+    <label>Last name: </label>
+    <input type="text" th:field="*{lastName}"/>
+    <input type="submit" value="Go"/>
+</form>
+<div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background: #fff">
+<h1>User Login</h1>
+<form id="userLogin" method="post">
+    <label>Username</label>
+    <input type="text" id="userName" name="userName">
+    <label>Password</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Login">
+</form>
+<p id="response"></p>
+<div id="loaderImg">
+    <p style="text-align: center">
+        <img style="height: 30%; width: 30%;" src="/images/octo-loader.gif">
+    </p>
+</div>
+<script>
+    $(function () {
+        $("#loaderImg").hide();
+
+        $("#userLogin").submit(function (e) {
+            e.preventDefault();
+            var formData = $(this);
+            $(this).serialize();
+            $.ajax({
+                method: "POST",
+                url: "/userForm",
+                data: formData.serialize(),
+                success: function (data) {
+                    $("#loaderImg").hide();
+                    $("#userLogin").hide();
+                    console.log(data);
+                    $("#response").append(data);
+                }
+            })
+        })
+        $(document).ajaxStart(function () {
+            $("#loaderImg").show();
+        })
+    })
+</script>
+</body>
+</html>

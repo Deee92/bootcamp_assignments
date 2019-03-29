@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>question 9</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<select id="mySelect">
+    <option th:value="None">Select One</option>
+    <option th:each="competency: ${T(com.ttn.thymeleaf.entity.User).values()}"
+            th:value="${competency.getValue()}" th:text="${competency.getValue()}"></option>
+</select>
+<input type="button" value="Choose" id="userClick">
+<script>
+    $(function () {
+        $("#userClick").click(function (e) {
+            var type = $("#mySelect").val();
+            console.log(type);
+            var url = "/userTypes/" + type;
+            $.ajax({
+                type: 'GET',
+                url: "/userTypes/" + type,
+                success: function (data) {
+                    console.log("success");
+                    console.log(url);
+                    console.log(data);
+                    document.write(data);
+                },
+                error: function (data) {
+                    alert("failed");
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    background: #eee;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: crimson;
+}
+
+button {
+    padding: 1em;
+    background: crimson;
+    color: #fff;
+    font-weight: bold;
+}
+
+table, tr, td {
+    padding: 2em;
+    text-align: center;
+    border: 1px solid crimson;
+    border-collapse: collapse;
+}
+
+small {
+    font-weight: lighter;
+    text-align: center;
+}
+
+tr.row.odd {
+    background: bisque;
+}
+
+tr.row.even {
+    background: lightblue;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users | Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<h1>User Table</h1>
+<table th:with="users = ${({'Deepika', 'Divya', 'Dhruv', 'Souvik'})}">
+    <tr th:each="user, iterStat: ${users}" class="row"
+        th:classappend="${iterStat.odd} ? 'odd' : 'even'">
+        <td th:text="${user}"></td>
+    </tr>
+</table>
+<div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>

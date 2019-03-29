@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greet User | Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{styles/style.css}">
+</head>
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<div th:with="var=${admin}">
+    <h1>Hi, <span th:if="${var}">admin!</span>
+        <span th:unless="${var}">user!</span>
+    </h1>
+</div>
+</body>
+<div th:replace="fragments/fragment :: footer"></div>
+</html>
